@@ -1,0 +1,20 @@
+delete from product_images;
+insert into product_images (product_id, image) values (1, '1_main.jpg');
+insert into product_images (product_id, image) values (2, '2_main.jpg');
+insert into product_images (product_id, image) values (3, '3_main.jpg');
+insert into product_images (product_id, image) values (4, '4_main.jpg');
+insert into product_images (product_id, image) values (5, '5_main.jpg');
+insert into product_images (product_id, image) values (6, '6_main.jpg');
+
+insert into product_images (product_id, image) values (1, '1_others1.jpg');
+insert into product_images (product_id, image) values (1, '1_others2.jpg');
+insert into product_images (product_id, image) values (2, '2_others1.jpg');
+insert into product_images (product_id, image) values (2, '2_others2.jpg');
+insert into product_images (product_id, image) values (3, '3_others1.jpg');
+insert into product_images (product_id, image) values (3, '3_others2.jpg');
+insert into product_images (product_id, image) values (4, '4_others1.jpg');
+insert into product_images (product_id, image) values (4, '4_others2.jpg');
+insert into product_images (product_id, image) values (5, '5_others1.jpg');
+insert into product_images (product_id, image) values (5, '5_others2.jpg');
+insert into product_images (product_id, image) values (6, '6_others1.jpg');
+insert into product_images (product_id, image) values (6, '6_others2.jpg');

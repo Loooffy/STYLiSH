@@ -1,0 +1,16 @@
+config:
+  target: 
+    #"http://stylish-1813244194.us-east-2.elb.amazonaws.com"
+    "https://theshinings.online"
+  http:
+    pool: 20
+  phases:
+    - duration: 20
+      arrivalRate: 40
+scenarios:
+  - flow:
+    - get:
+        url: 
+            #"/api/1.0/order/payments?n=10000"
+            "/api/1.0/order/payments?n=23000"
+            #"/api/1.0/order/payments?n=38000"

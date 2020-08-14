@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook Login JavaScript Example</title>
+    <link rel="stylesheet" type="text/css" href="css/sign.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" media="all" />
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="./"><img src="imgs/logo.png" /></a></div>
+        <nav>
+            <div class="item"><a href="./?tag=women">女裝</a></div>
+            <div class="item"><a href="./?tag=men">男裝</a></div>
+            <div class="item"><a href="./?tag=accessories">配件</a></div>
+        </nav>
+        <div class="feature">
+            <form class="item" action="./">
+                <input type="text" class="search" name="tag" />
+            </form>
+            <a href="cart.html" class="item cart"><div id="cart-qty" class="qty"></div></a>
+            <div class="item member">
+                <a href="profile.html">
+                    <img src="imgs/member.png" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="split"></nav>    
+
+    <main>
+        <div class="sign-title">signin</div>
+        <form class="signin" action="/api/1.0/user/signin" method="post">
+            <div>email</div>
+            <input type="text" name="email"></input>
+            <div>password</div>
+            <input type="password" name="password"></input>
+            <input type="submit" value="signin"></input>
+        </form>
+        <div class="sign-title">signup</div>
+        <form class="signup" action="/api/1.0/user/signup" method="post">
+            <div>name</div>
+            <input type="text" name="name"></input>
+            <div>email</div>
+            <input type="text" name="email"></input>
+            <div>password</div>
+            <input type="password" name="password"></input>
+            <input type="submit" value="signup"></input>
+        </form>
+        <fb:login-button id="fb" scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+        <div id="status"></div>
+    </main>
+
+    <footer>
+        <div class="view">
+            <div class="link">
+                <div class="item">關於 Stylish</div>
+                <div class="item">服務條款</div>
+                <div class="item">隱私政策</div>
+                <div class="item">聯絡我們</div>
+                <div class="item">FAQ</div>
+            </div>
+            <div class="social">
+                <img src="imgs/line.png" />
+                <img src="imgs/twitter.png" />
+                <img src="imgs/facebook.png" />
+            </div>
+            <div class="copyright">
+                &copy; 2018. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="sign.js"></script>
+</html>

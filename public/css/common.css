@@ -1,0 +1,200 @@
+body {
+    margin: 0px;
+    display: block;
+    font-size: 16px;
+    font-family: "Noto Sans TC", "微軟正黑體", "新細明體", arial, sans-serif;
+    color: #3f3a3a;
+    letter-spacing: 4px;
+}
+
+header {
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+
+.logo {
+    width: 270px;
+    margin-left: 30px;
+}
+
+.logo img {
+    height: 48px;
+}
+
+nav {
+    display: flex;
+    flex: auto;
+}
+
+nav .item {
+    margin-left: 30px;
+    letter-spacing: 25px;
+    text-align: center;
+    border-right: 1px solid #3f3a3a;
+}
+
+nav.split {
+    height: 20px;
+    background: #3f3a3a;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header .feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+header .cart {
+    width: 44px;
+    height: 44px;
+    background-image: url(../imgs/cart.png);
+}
+
+input.search {
+    width: 130px;
+    border: 1px solid #979797;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#campaign a img{
+    width: 100%;
+}
+
+.wrapper {
+    width: 70%;;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.product-block {
+    width: 30%;
+}
+
+.thumbnail {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem 0.5rem 0.5rem 0.5rem;
+}
+
+.thumbnail img {
+    width: 90%;
+}
+
+.thumbnail p {
+    margin: 2px;
+}
+
+.sizes {
+    padding: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.sizeblock {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    text-align: center;
+    margin: 0px 5px 0px 5px;
+    cursor: pointer;
+}
+
+.colors {
+    margin: 15px 5px 10px 0px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.colorblock {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: solid 3px #efe5e5;
+    cursor: pointer;
+}
+
+.coloractive {
+    outline: solid 1px black;
+}
+
+.amount-wrapper {
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    width: 120px;
+    height: 30px;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px black;
+}
+    
+.amount-wrapper .calc {
+    flex-basis:30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.amount-wrapper .amount {
+    text-align: center;
+}
+footer {
+    padding: 15px 0px 0px 0px;
+    letter-spacing: 1px;
+    background: #313538;
+    display: flex;
+    justify-content: center;
+    height: 20rem;
+    color: #efe3e3;
+}
+
+.view {
+    height: 66px;
+    display: flex;
+    align-items: center;
+}
+
+.view .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;    
+}
+
+.view .link .item {
+    margin-right: 15px;
+    font-size: 12px;
+    padding-right: 15px;
+    border-right: solid 1px #cfcacaca;
+}
+
+.social {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.social img {
+    width: 20%;
+    margin: 10px;
+}
+
+.copyright {
+    margin-left: 15px;
+    font-size: 12px;
+    color: #afaaaa;
+}

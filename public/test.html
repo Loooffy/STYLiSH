@@ -1,0 +1,176 @@
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stylish 購物車</title>
+<link rel="stylesheet" type="text/css" href="css/cart.css" media="all">
+<body>
+	<header>
+		<div class="padding-mobile"></div>
+		<div class="logo"><a href="./"><img src="imgs/logo.png"></a></div>
+		<nav>
+			<div class="item"><a href="./?tag=women">女裝</a></div>
+			<div class="item"><a href="./?tag=men">男裝</a></div>
+			<div class="item"><a href="./?tag=accessories">配件</a></div>
+		</nav>
+		<div class="feature">
+			<form class="item" action="./">
+				<input type="text" class="search" name="tag">
+			</form>
+			<a href="cart.html" class="item cart"><div id="cart-qty" class="qty">2</div></a>
+			<div class="item member">
+				<img src="imgs/member.png">
+			</div>
+		</div>
+	</header>
+	<nav class="mobile">
+		<div class="item"><a href="./?tag=women">女裝</a></div>
+		<div class="item"><a href="./?tag=men">男裝</a></div>
+		<div class="item"><a href="./?tag=accessories">配件</a></div>
+	</nav>
+	<div class="padding-header-mobile"></div>
+	<div class="feature-mobile">
+		<a class="item" href="cart.html">
+			<div class="cart"><div id="cart-qty-mobile" class="qty">2</div></div>
+			購物車
+		</a>
+		<div class="item member">
+			<img src="imgs/member-mobile.png">
+			會員
+		</div>
+	</div>
+	<main>
+		<div class="view">
+			<div class="cart">
+				<div class="row title">
+					<div class="variant">&nbsp;</div>
+					<div class="qty">數量</div>
+					<div class="price">單價</div>
+					<div class="subtotal">小計</div>
+					<div class="remove"></div>
+				</div>
+				<div class="list" id="cart-list"><div class="row"><div class="variant"><div class="picture"><img src="https://api.appworks-school.tw/assets/201807242211/main.jpg"></div><div class="details">純色輕薄百搭襯衫<br>201807242211<br><br>顏色：白色<br>尺寸：M</div></div><div class="qty"><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div><div class="price">NT. 799</div><div class="subtotal">NT. 799</div><div class="remove"><img src="imgs/cart-remove.png"></div></div><div class="row"><div class="variant"><div class="picture"><img src="https://api.appworks-school.tw/assets/201807201824/main.jpg"></div><div class="details">前開衩扭結洋裝<br>201807201824<br><br>顏色：白色<br>尺寸：S</div></div><div class="qty"><select><option value="1">1</option><option value="2">2</option></select></div><div class="price">NT. 799</div><div class="subtotal">NT. 799</div><div class="remove"><img src="imgs/cart-remove.png"></div></div></div>
+			</div>
+			<div class="target">
+				<div class="country">
+					<span class="text">配送國家</span>
+					<select>
+						<option>台灣或離島</option>
+					</select>
+				</div>
+				<div class="country">
+					<span class="text">付款方式</span>
+					<select>
+						<option>信用卡付款</option>
+					</select>
+				</div>
+			</div>
+			<div class="reminder">
+				<div>※ 提醒您：</div>
+				<div>● 請填寫正確收件人資訊，避免包裹配送不達</div>
+				<div>● 請填寫正確收件人姓名 ( 與證件相符 )，避免無法領取</div>
+			</div>
+			<div class="recipient">
+				<div class="title">收件資料</div>
+				<div class="line">
+					<div class="text">收件人姓名</div>
+					<div class="input">
+						<input type="text" id="recipient-name">
+					</div>
+				</div>
+				<div class="line">
+					<div class="text">Email</div>
+					<div class="input">
+						<input type="text" id="recipient-email">
+					</div>
+				</div>
+				<div class="line">
+					<div class="text">手機號碼</div>
+					<div class="input">
+						<input type="text" id="recipient-phone">
+					</div>
+				</div>
+				<div class="line">
+					<div class="text">收件地址</div>
+					<div class="input">
+						<input type="text" id="recipient-address">
+					</div>
+				</div>
+				<div class="line">
+					<div class="text">配送時間</div>
+					<div class="input">
+						<label><input type="radio" value="morning" name="recipient-time"><span class="time"> 08:00 - 12:00</span></label>
+						<label><input type="radio" value="afternoon" name="recipient-time"><span class="time"> 14:00 - 18:00</span></label>
+						<label><input type="radio" value="anytime" name="recipient-time" checked=""><span class="time"> 不指定</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="payment">
+				<div class="title">付款資料</div>
+				<div class="line">
+					<div class="text">信用卡號碼</div>
+					<div class="input">
+						<div class="tpfield" id="card-number"><iframe frameborder="0" allowtransparency="true" scrolling="no" style="border: none; width: 100%; height: 100%; float: left;" src="https://js.tappaysdk.com/tpdirect/v3/tappay-field/html?%7B%22origin%22%3A%22https%3A%2F%2Fapi.appworks-school.tw%22%2C%22type%22%3A%22card-number%22%2C%22placeholder%22%3A%22****%20****%20****%20****%22%7D"></iframe></div>
+					</div>
+				</div>
+				<div class="line">
+					<div class="text">有效期限</div>
+					<div class="input">
+						<div class="tpfield" id="card-expiration-date"><iframe frameborder="0" allowtransparency="true" scrolling="no" style="border: none; width: 100%; height: 100%; float: left;" src="https://js.tappaysdk.com/tpdirect/v3/tappay-field/html?%7B%22origin%22%3A%22https%3A%2F%2Fapi.appworks-school.tw%22%2C%22type%22%3A%22expiration-date%22%2C%22placeholder%22%3A%22MM%20%2F%20YY%22%7D"></iframe></div>
+					</div>
+				</div>
+				<div class="line">
+					<div class="text">安全碼</div>
+					<div class="input">
+						<div class="tpfield" id="card-ccv"><iframe frameborder="0" allowtransparency="true" scrolling="no" style="border: none; width: 100%; height: 100%; float: left;" src="https://js.tappaysdk.com/tpdirect/v3/tappay-field/html?%7B%22origin%22%3A%22https%3A%2F%2Fapi.appworks-school.tw%22%2C%22type%22%3A%22cvc%22%2C%22placeholder%22%3A%22CCV%22%7D"></iframe></div>
+					</div>
+				</div>
+			</div>
+			<div class="confirm">
+				<div class="row">
+					<div class="title">總金額</div>
+					<div class="price"><span class="unit">NT. </span><span id="subtotal">1598</span></div>
+				</div>
+				<div class="row">
+					<div class="title">運費</div>
+					<div class="price"><span class="unit">NT. </span><span id="freight">60</span></div>
+				</div>
+				<div class="row">
+					<div class="separator"></div>
+				</div>
+				<div class="row">
+					<div class="title">應付金額</div>
+					<div class="price"><span class="unit">NT. </span><span id="total">1658</span></div>
+				</div>
+				<div class="row">
+					<button id="checkout">確認付款</button>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="view">
+			<div class="link link-0">
+				<div class="item">關於 Stylish</div>
+				<div class="item">服務條款</div>
+				<div class="item">隱私政策</div>
+			</div>
+			<div class="link link-1">
+				<div class="item">聯絡我們</div>
+				<div class="item">FAQ</div>
+			</div>
+			<div class="social">
+				<img src="imgs/line.png">
+				<img src="imgs/twitter.png">
+				<img src="imgs/facebook.png">
+			</div>
+			<div class="copyright">
+				© 2018. All rights reserved.
+			</div>
+		</div>
+	</footer>
+	<div id="loading" class="loading">
+		<img src="imgs/loading.gif">
+	</div>
+
+
+<iframe style="display: none;" src="https://fraud.tappaysdk.com/iframe?%7B%22appKey%22%3A%22app_pa1pQcKoY22IlnSXq5m5WP5jFKzoRG58VEXpT7wU62ud7mMbDOGzCYIlzzLF%22%2C%22appID%22%3A%2212348%22%2C%22serverType%22%3A%22sandbox%22%2C%22hostname%22%3A%22api.appworks-school.tw%22%2C%22origin%22%3A%22https%3A%2F%2Fapi.appworks-school.tw%22%2C%22referrer%22%3A%22https%3A%2F%2Fapi.appworks-school.tw%2F%22%2C%22href%22%3A%22https%3A%2F%2Fapi.appworks-school.tw%2Fcart.html%22%2C%22port%22%3A%22%22%2C%22protocol%22%3A%22https%3A%22%2C%22sdk_version%22%3A%22v3%22%7D"></iframe><iframe allowpaymentrequest="true" frameborder="0" allowtransparency="true" scrolling="no" style="display: none;" src="https://js.tappaysdk.com/tpdirect/v3/api/html?%7B%22appKey%22%3A%22app_pa1pQcKoY22IlnSXq5m5WP5jFKzoRG58VEXpT7wU62ud7mMbDOGzCYIlzzLF%22%2C%22appID%22%3A%2212348%22%2C%22serverType%22%3A%22sandbox%22%2C%22hostname%22%3A%22api.appworks-school.tw%22%2C%22origin%22%3A%22https%3A%2F%2Fapi.appworks-school.tw%22%2C%22referrer%22%3A%22https%3A%2F%2Fapi.appworks-school.tw%2F%22%2C%22href%22%3A%22https%3A%2F%2Fapi.appworks-school.tw%2Fcart.html%22%2C%22port%22%3A%22%22%2C%22protocol%22%3A%22https%3A%22%2C%22sdk_version%22%3A%22v3%22%7D"></iframe><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>

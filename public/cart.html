@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>stylish checkout</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/cart.css" media="all" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<header>
+		<div class="logo"><a href="./"><img src="imgs/logo.png" /></a></div>
+		<nav>
+			<div class="item"><a href="./?tag=women">女裝</a></div>
+			<div class="item"><a href="./?tag=men">男裝</a></div>
+			<div class="item"><a href="./?tag=accessories">配件</a></div>
+		</nav>
+		<div class="feature">
+			<form class="item">
+				<input type="text" class="search" name="tag" />
+			</form>
+			<a href="cart.html" class="item cart"><div id="cart-qty" class="qty"></div></a>
+			<div class="item member">
+                <a href="profile.html">
+                    <img src="imgs/member.png" />
+                </a>
+			</div>
+		</div>
+	</header>
+    <nav class="split"></nav>    
+    <div class="cart-list"></div> 
+    <main>
+        <form id="form">
+            <div class="block-title">
+                <label>寄送資料</label>
+            </div>
+            <div class="form-block" id="info">
+                <div class="form-group">
+                    <label for="shipping">配送國家</label>
+                    <input id="shipping" placeholder="shipping">
+                </div>
+                <div class="form-group">
+                    <label for="payment">付款方式</label>
+                    <input id="payment" placeholder="payment">
+                </div>
+                <div class="form-group">
+                    <label for="name">收件人姓名</label>
+                    <input id="name" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">手機號碼</label>
+                    <input id="phone" placeholder="phone">
+                </div>
+                <div class="form-group">
+                    <label for="address">收件地址</label>
+                    <input id="address" placeholder="address">
+                </div>
+                <div class="form-group">
+                    <label for="time">配送時間</label>
+                    <input id="time" placeholder="time">
+                </div>
+            </div>
+            <div class="block-title">
+                <label>付款資料</label>
+            </div>
+            <div class="form-block" id="card">
+                <div class="form-group card-number-group">
+                    <label for="card_number" class="control-label"><span id="cardtype"></span>卡號</label>
+                    <div class="tpfield" id="card_number"></div>
+                </div>
+                <div class="form-group expiration-date-group">
+                    <label for="expiration-date" class="control-label">卡片到期日</label>
+                    <div class="tpfield" id="exp"></div>
+                </div>
+                <div class="form-group cvc-group">
+                    <label for="cvc" class="control-label">卡片後三碼</label>
+                    <div class="tpfield" id="ccv"></div>
+                </div>
+            </div>
+            <div class="pay">
+                <div class="total">
+                    <div class="sub-total">
+                        <div class="price-label">
+                            <div>總金額</div>
+                            <div>運費</div>
+                            <div>應付金額</div>
+                        </div>
+                        <div class="price-amount">
+                            <div class="total-price" id="total-price">NT. </div>
+                            <div class="delivery" id="delivery">NT. </div>
+                            <div id="sum-total">NT. </div>
+                        </div>
+                </div>
+                <button type="submit">確認付款</button>
+            </div>
+        </form>
+    </main>
+	<footer>
+		<div class="view">
+			<div class="link">
+				<div class="item">關於 Stylish</div>
+				<div class="item">服務條款</div>
+				<div class="item">隱私政策</div>
+				<div class="item">聯絡我們</div>
+				<div class="item">FAQ</div>
+			</div>
+			<div class="social">
+				<img src="imgs/line.png" />
+				<img src="imgs/twitter.png" />
+				<img src="imgs/facebook.png" />
+			</div>
+			<div class="copyright">
+				&copy; 2018. All rights reserved.
+			</div>
+		</div>
+	</footer>
+</body>
+
+<template>
+    <div class="products">
+       <div class="row">
+          <div class="variant">
+            <img id="product-image" src="">
+            <div class="list-info">
+                <div class="details" id="title"></div>
+                <div id="id"></div>
+                <div id="color">顏色：</div>
+                <div id="size">尺寸：</div>
+            </div>
+          </div>
+          <div class="qty">
+             <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+             </select>
+          </div>
+          <div class="price" id="price">NT. </div>
+          <div class="subtotal" id="subtotal">NT. </div>
+          <div class="remove"><img src="imgs/cart-remove.png"></div>
+       </div>
+    </div>
+</template>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://js.tappaysdk.com/tpdirect/v5.1.0"></script>
+<script src="cart.js"></script>
+<script src="tapPay.js"></script>
+
+</html>

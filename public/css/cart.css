@@ -1,0 +1,182 @@
+.tpfield {
+    height: 20px;
+    width: 200px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5% 15%
+}
+
+.form-block {
+    margin: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.form-block label {
+    width: 15%;
+}
+
+#info input {
+    width: 30%;
+}
+
+.block-title {
+    width: 100%;
+    border-bottom: solid 1px black;
+    margin-bottom: 10px;
+}
+
+#form {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.form-group {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.form-group label {
+    width: 15%;
+    font-weight: 100;
+}
+
+input   {
+    width: 60%;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+#card {
+    border-bottom: solid 1px black;
+}
+
+.cart-list {
+    margin: auto;
+    margin-top: 20px;
+    width: 70%;
+    border: solid 1px black;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.variant {
+    padding: 20px;
+    width: 35%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.list-info {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#title {
+    width: 100%;
+}
+
+.details {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.subtotal {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+.remove {
+    flex-grow: 3;
+    justify-content: flex-end;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.products {
+    letter-spacing: 0px;
+    display: flex;
+    flex-flow: column nowrap; 
+    justify-content: space-between;
+}
+
+.variant img {
+    padding: 15px;
+    width: 40%;
+}
+
+div.pay {
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.total {
+    margin: 20px;
+    width: 35%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.sub-total {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.price-label {
+    width: 50%;
+}
+
+.price-label div {
+    margin: 20px 10px;
+    text-align: start;
+}
+    
+.price-amount {
+    width: 50%;
+}
+
+.price-amount div {
+    text-align: end;
+    margin: 20px;
+}
+
+button {
+    letter-spacing: 4px;
+    margin-top: 15px;
+    height: 45px;
+    background: black;
+    color: white;
+}

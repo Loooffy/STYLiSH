@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <script src="ajaxreq.js"></script>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+    </head>
+
+    <body onload="addEvent()">
+      <div class="main">
+        <div class="property">
+        <form onsubmit="getVariants(event)" action='/api/1.0/products/create' method='POST' enctype="multipart/form-data">
+            <label>id</label>
+            <label>xxxx</label><br>
+            <label>title</label>
+            <input type="text" name='title'></input><br>
+            <label>description</label>
+            <input type="text" name='description'></input><br>
+            <label>price</label>
+            <input value="100" type="number" name='price'></input><br>
+            <label>texture</label>
+            <select name="texture">
+                <option selected="selected" value="cotton">cotton</option>
+                <option value="nylon">nylon</option>
+                <option value="leather">leather</option>
+            </select><br>
+            <label>wash</label>
+            <select name="wash">
+                <option selected="selected" value="hand">hand</option>
+                <option value="machine">machine</option>
+                <option value="no need">no need</option>
+            </select><br>
+            <label>place</label>
+            <input type="text" name='place'></input><br>
+            <label>note</label>
+            <input type="text" name='note'></input><br>
+            <label>story</label>
+            <input type="text" name='story'></input><br>
+            <label>category</label>
+            <select  name="category">category</label>
+                <option value="men">men</option>
+                <option selected="selected" value="women">women</option>
+                <option value="accessories">accessories</option>
+            </select><br>
+            <label>main_image</label>
+            <input multiple type="file" name="main_image"></input><br>
+            <label>images</label>
+            <input multiple type="file" name="images"></input><br>
+            <button>submit</button>
+        </form>
+</div>
+
+<div class="stock">
+            <table id='variants'>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>blue</th>
+                        <th>red</th>
+                        <th>black</th>
+                        <th>white</th>
+                        <th>green</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>XL</td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                    </tr>
+                    <tr>
+                        <td>XS</td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                        <td><input type="checkbox" /><input type="number" class="amount"/></td>
+                    </tr>
+            </tbody>
+        </table>
+</div>
+</div>
+    </body>
+</html>

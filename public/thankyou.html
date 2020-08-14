@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <title>stylish checkout</title>
+        <link rel="stylesheet" type="text/css" href="css/common.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/cart.css" media="all" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <header>
+            <div class="logo"><a href="./"><img src="imgs/logo.png" /></a></div>
+            <nav>
+                <div class="item"><a href="./?tag=women">女裝</a></div>
+                <div class="item"><a href="./?tag=men">男裝</a></div>
+                <div class="item"><a href="./?tag=accessories">配件</a></div>
+            </nav>
+            <div class="feature">
+                <form class="item">
+                    <input type="text" class="search" name="tag" />
+                </form>
+                <a href="cart.html" class="item cart"><div id="cart-qty" class="qty"></div></a>
+                <div class="item member">
+                    <img src="imgs/member.png" />
+                </div>
+            </div>
+        </header>
+        <nav class="split"></nav>    
+        <div class="cart-list"></div> 
+        <main style="flex-flow:column nowrap; align-items:center">
+            <span style="font-size:1.4em;font-weight:bold">感謝您的購買，我們會盡快將商品送達</span>
+            <br>
+            <span style="font-weight:bold; border-bottom:solid 1px black">請記住以下訂單編號，以便查詢</span>
+            <br>
+            <span>訂單編號：</span><span style="background:#eaefef;color:black;padding:5px 20px;margin:10px;border-radius:3px" id="checkId"></span>
+            <br>
+            <a href="/index.html" style="background:lightgray; color:steelgray; padding:5px; border-radius:3px">繼續購買</a>
+        </main>
+        <footer>
+            <div class="view">
+                <div class="link">
+                    <div class="item">關於 Stylish</div>
+                    <div class="item">服務條款</div>
+                    <div class="item">隱私政策</div>
+                    <div class="item">聯絡我們</div>
+                    <div class="item">FAQ</div>
+                </div>
+                <div class="social">
+                    <img src="imgs/line.png" />
+                    <img src="imgs/twitter.png" />
+                    <img src="imgs/facebook.png" />
+                </div>
+                <div class="copyright">
+                    &copy; 2018. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script>
+        let checkIdElement = document.getElementById("checkId")
+        let cookieArr = document.cookie.split(';').map(r=>'{"'+r.replace('=','":"').trim() +'"}')
+        let cookies = Object.assign({}, ...cookieArr.map(c => JSON.parse(c)))
+        let checkId = cookies.checkId
+        checkIdElement.innerHTML += ` ${checkId}`
+    </script>
+</html>

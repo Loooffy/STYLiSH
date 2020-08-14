@@ -1,0 +1,61 @@
+.main {
+  display: flex;
+}
+
+.property {
+  display: flex;
+  height: 100%;
+  margin: 2em;
+  padding: 2em;
+  border: 2px solid lightgray;
+  border-radius: 1.5em;
+}
+
+.property input {
+    width: 12em;
+}
+
+form {
+    display: flex;
+    flex-flow: nowrap column;
+}
+
+.stock input {
+    width: 4em;
+}
+
+.stock {
+  margin: 2em;
+}
+
+table{
+  margin: auto;
+  padding: 20px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+tr{
+  border: 1px solid gray;
+}
+td{
+  border: 1px solid lightgray;
+  padding: 10px 30px;
+  color: black;
+}
+
+/*第一欄第一列：左上*/
+tr:first-child td:first-child{
+  border-top-left-radius: 1.5em;
+}
+/*第一欄最後列：左下*/
+tr:last-child td:first-child{
+  border-bottom-left-radius: 1.5em;
+}
+/*最後欄第一列：右上*/
+tr:first-child td:last-child{
+  border-top-right-radius: 1.5em;
+}
+/*最後欄第一列：右下*/
+tr:last-child td:last-child{
+  border-bottom-right-radius: 1.5em;
+}

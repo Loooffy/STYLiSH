@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    </head>
+
+    <body>
+        <div id='revenue' style='font-size:50px'></div>
+        <div id='color_sold'></div>
+        <div id='price_sold'></div>
+        <div id='top_five'></div>
+    </body>
+
+    <script>
+        function getData(url) {
+          return fetch(url, {
+            method: 'GET'
+          })
+        } 
+
+        function revenueText(revenue) {
+            document.getElementById('revenue').innerHTML = `Total Revenue: ${revenue.data.revenue}`
+        }
+
+        function histogram(x) {
+            let trace = {
+               x: x.map(prices => {return prices.price}),
+               type: 'histogram',
+              };
+            let data = [trace];
+            Plotly.newPlot('price_sold', data);
+        }
+
+        function pieChart(colorSold) {
+            colorSold = colorSold.data
+            let data = [{
+                values: colorSold.map(color => color.sold),
+                labels: colorSold.map(color => color.name),
+                marker: {
+                    colors: colorSold.map(color => color.color_code)
+                },
+                type: 'pie'
+            }];
+
+            let layout = {
+            height: 400,
+            width: 500
+            };
+
+            Plotly.newPlot('color_sold', data, layout);
+        }
+        
+        function barChart(topFiveSize) {
+            console.log(topFiveSize)
+            let data = []
+            let size = ['L','M','S'] 
+            for (n in size) {
+                data.push({
+                  x: topFiveSize.data.map(product => 'product' + `${product[0].product_id}`),
+                  y: topFiveSize.data.map(i=> i.filter(i=>i.size === size[n])).map(i=>i[0].quantity),
+                  name: size[n],
+                  type: 'bar'
+                })
+            }
+            console.log(data)
+            var layout = {barmode: 'stack'};
+            Plotly.newPlot('top_five', data, layout);
+        }
+
+        async function showPlot() {
+            let allPriceUrl = '/api/1.0/dashboard/getPriceOfAll'
+            let allPrice = await getData(allPriceUrl).then(r => r.json())
+            let revenueUrl = '/api/1.0/dashboard/revenue'
+            let revenue = await getData(revenueUrl).then(r => r.json())
+            let colorSoldUrl = '/api/1.0/dashboard/colorSold'
+            let colorSold = await getData(colorSoldUrl).then(r => r.json())
+            let topFiveSizeUrl = '/api/1.0/dashboard/getTopFiveSize'
+            let topFiveSize = await getData(topFiveSizeUrl).then(r => r.json())
+
+            revenueText(revenue)
+            histogram(allPrice)
+            pieChart(colorSold)
+            barChart(topFiveSize)
+        }
+        showPlot()
+    </script>
+</html>

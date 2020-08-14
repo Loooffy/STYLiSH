@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="ecommerce website. updated at 202001031559." />
+<title>Stylish 2019 Winter</title>
+<link rel="stylesheet" type="text/css" href="css/common.css" media="all" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<header>
+		<div class="logo"><a href="./"><img src="imgs/logo.png" /></a></div>
+		<nav>
+			<div class="item"><a href="./?tag=women">女裝</a></div>
+			<div class="item"><a href="./?tag=men">男裝</a></div>
+			<div class="item"><a href="./?tag=accessories">配件</a></div>
+		</nav>
+		<div class="feature">
+			<form class="item" action="./">
+				<input type="text" class="search" name="tag" />
+			</form>
+			<a href="cart.html" class="item cart"><div id="cart-qty" class="qty"></div></a>
+			<div class="item member">
+                <a href="profile.html">
+                    <img src="imgs/member.png" />
+                </a>
+			</div>
+		</div>
+	</header>
+    <nav class="split"></nav>    
+	</div>
+    <div id="campaign">
+        <a>
+            <img :src="imgPath" />
+        </a>
+    </div>
+    <div id="products_list">
+        <productlist :products="products"></productlist>
+    </div>
+	<main>
+		<div class="view">
+			<div id="products" class="products"></div>
+		</div>
+	</main>
+	<footer>
+		<div class="view">
+			<div class="link">
+				<div class="item">關於 Stylish</div>
+				<div class="item">服務條款</div>
+				<div class="item">隱私政策</div>
+				<div class="item">聯絡我們</div>
+				<div class="item">FAQ</div>
+			</div>
+			<div class="social">
+				<img src="imgs/line.png" />
+				<img src="imgs/twitter.png" />
+				<img src="imgs/facebook.png" />
+			</div>
+			<div class="copyright">
+				&copy; 2018. All rights reserved.
+			</div>
+		</div>
+	</footer>
+</body>
+<script src="index.js"></script>
+</html>

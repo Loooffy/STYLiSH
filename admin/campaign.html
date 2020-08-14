@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+    </head>
+
+    <body>
+      <div class="main">
+        <div class="property">
+        <form action='/api/1.0/products/marketing/campaigns/create' method='POST' enctype="multipart/form-data">
+            <label>product_id</label>
+            <select name="product_id">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select><br>
+            <label>story</label>
+            <input type="text" name="story"></input><br>
+            <label>image</label>
+            <input type="file" name="image"></input><br>
+            <button>submit</button>
+        </form>
+</div>
